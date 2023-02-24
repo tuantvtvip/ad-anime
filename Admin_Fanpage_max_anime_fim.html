@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta banner2="viewport" content="widfpg=device-widfpg, initial-scale=1.0" />
+    <title>CRUD wifpg Firebase</title>
+    <link rel="stylesheet" href="Admin_webfim.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>CRUD wifpg Firebase</h2>
+      <hr />
+      <br />
+      <div class="form">
+
+          <h2>Chọn Cho Fanpage Của 1 Thể loại Phim</h2> <br /><br />
+          <label>Tên Thuộc Thể Loại</label>
+           <input type="text"  id="namefpgeloai" value="Anime/Fim"/> <br /><br/>
+          <label>Số Trang Max</label>
+         <input type="text"  id="fanpage" /> <br   
+      <div class="buttons">
+        <button id="insert">Insert</button>
+        <button id="read">Read</button>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyB1d2RnWXRHSTS1qlZw4PeT8mxpH40k4rQ",
+  aufpgDomain: "music-chill.firebaseapp.com",
+  databaseURL: "https://music-chill-default-rtdb.firebaseio.com",
+  projectId: "music-chill",
+  storageBucket: "music-chill.appspot.com",
+  messagingSenderId: "1003717395193",
+  appId: "1:1003717395193:web:a5367243d34afac9f81828"
+};
+firebase.initializeApp(firebaseConfig);
+function readFom() {
+  namefpgeloaiV= document.getElementById("namefpgeloai").value;
+  fanpageV = document.getElementById("fanpage").value;
+};
+document.getElementById("insert").onclick = function () {
+   namefpgeloaiV= document.getElementById("namefpgeloai").value;
+   fanpageV = document.getElementById("fanpage").value;
+      if (namefpgeloaiV == "" || namefpgeloaiV==" "|| namefpgeloaiV=="null" || namefpgeloaiV== "undefined" && fanpageV == "" || fanpageV==" "|| fanpageV=="null" || fanpageV== "undefined"){
+     alert("Nhập data vô bro!!!!!");
+   }else{
+  alert("bạn có chắc lưu không, nếu không đóng tab hoặc fpgoát nhé để không mất những dữ liệu khác !!!!!!");
+  readFom();
+  firebase
+    .database()
+    .ref("Top_Anime/Anime_Fim_Max/" + namefpgeloaiV)
+    .set({
+     namefpgeloai: namefpgeloaiV,
+     fanpagemax: fanpageV,
+    });
+ alert("Data Inserted");
+  document.getElementById("namefpgeloai").value = "";
+  document.getElementById("fanpage").value = "";
+
+   }
+   };
+document.getElementById("read").onclick = function () {
+  namefpgeloaiV= document.getElementById("namefpgeloai").value;
+   fanpageV = document.getElementById("fanpage").value;
+  readFom();
+  firebase
+    .database()
+    .ref("Top_Anime/Anime_Fim_Max/" + namefpgeloaiV)
+    .on("value", function (snap) {
+    document.getElementById("namefpgeloai").value = snap.val().namefpgeloai;
+     document.getElementById("fanpage").value = snap.val().fanpagemax;
+    });
+};
+    </script>
+  </body>
+</html>

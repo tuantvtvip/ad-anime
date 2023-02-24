@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta banner2="viewport" content="widfpg=device-widfpg, initial-scale=1.0" />
+    <title>CRUD wifpg Firebase</title>
+    <link rel="stylesheet" href="Admin_webfim.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>CRUD wifpg Firebase</h2>
+      <hr />
+      <br />
+      <div class="form">
+
+          <h2>Chọn Phim Thuộc Thể Loại Nào</h2> <br /><br />
+          <label>Tên Thuộc Thể Loại</label>
+           <input type="text"  id="namefpgeloai" value="Anime/Fim"/> <br /><br/>
+          <label>Số Trang</label>
+         <input type="text"  id="fanpage" /> <br /><br />
+          <label>fpg.IMG1</label>
+         <input type="text"  id="fpgimg1" /> <br /><br/>
+          <label>fpg.NAME1</label>
+         <input type="text"  id="fpgname1" /> <br /><br />
+        <label>fpg.VIEW1</label>
+         <input type="text"  id="fpgview1" /> <br /><br />
+          <label>Lẻ hay Tập 1</label>
+         <input type="text"  id="fpglt1" value="L/T" /> <br /><br />
+         <label>fpg.IMG2</label>
+         <input type="text"  id="fpgimg2" /> <br /><br/>
+         <label>fpg.NAME2</label>
+         <input type="text"  id="fpgname2" /> <br /><br />
+        <label>fpg.VIEW2</label>
+         <input type="text"  id="fpgview2" /> <br /><br />
+         <label>Lẻ hay Tập 2</label>
+         <input type="text"  id="fpglt2"value="L/T" /> <br /><br />
+          <label>fpg.IMG3</label>
+         <input type="text"  id="fpgimg3" /> <br /><br/>
+          <label>fpg.NAME3</label>
+         <input type="text"  id="fpgname3" /> <br /><br />
+        <label>fpg.VIEW3</label>
+         <input type="text"  id="fpgview3" /> <br /><br />
+         <label>Lẻ hay Tập 3</label>
+         <input type="text"  id="fpglt3" value="L/T"/> <br /><br />
+        
+          <label>fpg.IMG4</label>
+         <input type="text"  id="fpgimg4" /> <br /><br/>
+          <label>fpg.NAME4</label>
+         <input type="text"  id="fpgname4" /> <br /><br />
+        <label>fpg.VIEW4</label>
+         <input type="text"  id="fpgview4" /> <br /><br />
+          <label>Lẻ hay Tập 4</label>
+         <input type="text"  id="fpglt4" value="L/T" /> <br /><br />
+    
+          <label>fpg.IMG5</label>
+         <input type="text"  id="fpgimg5" /> <br /><br/>
+         <label>fpg.NAME5</label>
+         <input type="text"  id="fpgname5" /> <br /><br />
+        <label>fpg.VIEW5</label>
+         <input type="text"  id="fpgview5" /> <br /><br />
+         <label>Lẻ hay Tập 5</label>
+         <input type="text"  id="fpglt5"value="L/T" /> <br /><br />
+          
+           <label>fpg.IMG6</label>
+         <input type="text"  id="fpgimg6" /> <br /><br/>
+          <label>fpg.NAME6</label>
+         <input type="text"  id="fpgname6" /> <br /><br />
+        <label>fpg.VIEW6</label>
+         <input type="text"  id="fpgview6" /> <br /><br />
+         <label>Lẻ hay Tập 6</label>
+         <input type="text"  id="fpglt6" value="L/T"/> <br /><br />
+
+
+      <div class="buttons">
+        <button id="insert">Insert</button>
+        <button id="read">Read</button>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyB1d2RnWXRHSTS1qlZw4PeT8mxpH40k4rQ",
+  aufpgDomain: "music-chill.firebaseapp.com",
+  databaseURL: "https://music-chill-default-rtdb.firebaseio.com",
+  projectId: "music-chill",
+  storageBucket: "music-chill.appspot.com",
+  messagingSenderId: "1003717395193",
+  appId: "1:1003717395193:web:a5367243d34afac9f81828"
+};
+firebase.initializeApp(firebaseConfig);
+function readFom() {
+  namefpgeloaiV= document.getElementById("namefpgeloai").value;
+  fanpageV = document.getElementById("fanpage").value;
+  fpgimg1V = document.getElementById("fpgimg1").value;
+  fpgname1V = document.getElementById("fpgname1").value;
+  fpgview1V = document.getElementById("fpgview1").value;
+  fpglt1V = document.getElementById("fpglt1").value;
+  fpgimg2V = document.getElementById("fpgimg2").value;
+  fpgname2V = document.getElementById("fpgname2").value;
+  fpgview2V = document.getElementById("fpgview2").value;
+  fpglt2V = document.getElementById("fpglt2").value;
+ fpgimg3V = document.getElementById("fpgimg3").value;
+ fpgname3V = document.getElementById("fpgname3").value;
+ fpgview3V = document.getElementById("fpgview3").value;
+ fpglt3V = document.getElementById("fpglt3").value;
+ fpgimg4V = document.getElementById("fpgimg4").value;
+ fpgname4V = document.getElementById("fpgname4").value;
+ fpgview4V = document.getElementById("fpgview4").value;
+ fpglt4V = document.getElementById("fpglt4").value;
+ fpgimg5V = document.getElementById("fpgimg5").value;
+ fpgname5V = document.getElementById("fpgname5").value;
+ fpgview5V = document.getElementById("fpgview5").value;
+ fpglt5V = document.getElementById("fpglt5").value;
+ fpgimg6V = document.getElementById("fpgimg6").value;
+ fpgname6V = document.getElementById("fpgname6").value;
+ fpgview6V = document.getElementById("fpgview6").value;
+ fpglt6V = document.getElementById("fpglt6").value;
+};
+document.getElementById("insert").onclick = function () {
+   namefpgeloaiV= document.getElementById("namefpgeloai").value;
+   fanpageV = document.getElementById("fanpage").value;
+   if (namefpgeloaiV == "" || namefpgeloaiV==" "|| namefpgeloaiV=="null" || namefpgeloaiV== "undefined" && fanpageV == "" || fanpageV==" "|| fanpageV=="null" || fanpageV== "undefined"){
+     alert("Nhập data vô bro!!!!!");
+   }else{
+  alert("bạn có chắc lưu không, nếu không đóng tab hoặc fpgoát nhé để không mất những dữ liệu khác !!!!!!");
+  readFom();
+  firebase
+    .database()
+    .ref("Top_Anime/" + namefpgeloaiV+"/"+fanpageV)
+    .set({
+     namefpgeloai: namefpgeloaiV,
+     fanpage: fanpageV,
+      fpgimg1: fpgimg1V,
+      fpgname1: fpgname1V,
+      fpgview1: fpgview1V,
+      fpglt1: fpglt1V,
+      fpgimg2: fpgimg2V,
+      fpgname2: fpgname2V,
+      fpgview2: fpgview2V,
+      fpglt2: fpglt2V,
+       fpgimg3: fpgimg3V,
+       fpgname3: fpgname3V,
+       fpgview3: fpgview3V,
+       fpglt3: fpglt3V,
+       fpgimg4: fpgimg4V,
+       fpgname4: fpgname4V,
+       fpgview4: fpgview4V,
+       fpglt4: fpglt4V,
+       fpgimg5: fpgimg5V,
+       fpgname5: fpgname5V,
+       fpgview5: fpgview5V,
+       fpglt5: fpglt5V,
+       fpgimg6: fpgimg6V,
+       fpgname6: fpgname6V,
+       fpgview6: fpgview6V,
+       fpglt6: fpglt6V,
+
+    });
+ alert("Data Inserted");
+  document.getElementById("namefpgeloai").value = "";
+  document.getElementById("fanpage").value = "";
+  document.getElementById("fpgimg1").value = "";
+  document.getElementById("fpgname1").value = "";
+ document.getElementById("fpgview1").value = "";
+ document.getElementById("fpglt1").value = "";
+ document.getElementById("fpgimg2").value = "";
+  document.getElementById("fpgname2").value = "";
+ document.getElementById("fpgview2").value = "";
+ document.getElementById("fpglt2").value = "";
+ document.getElementById("fpgimg3").value = "";
+  document.getElementById("fpgname3").value = "";
+ document.getElementById("fpgview3").value = "";
+ document.getElementById("fpglt3").value = "";
+ document.getElementById("fpgimg4").value = "";
+  document.getElementById("fpgname4").value = "";
+ document.getElementById("fpgview4").value = "";
+ document.getElementById("fpglt4").value = "";
+ document.getElementById("fpgimg5").value = "";
+  document.getElementById("fpgname5").value = "";
+ document.getElementById("fpgview5").value = "";
+ document.getElementById("fpglt5").value = "";
+ document.getElementById("fpgimg6").value = "";
+  document.getElementById("fpgname6").value = "";
+ document.getElementById("fpgview6").value = "";
+ document.getElementById("fpglt6").value = "";
+
+   }
+   };
+
+document.getElementById("read").onclick = function () {
+  namefpgeloaiV= document.getElementById("namefpgeloai").value;
+   fanpageV = document.getElementById("fanpage").value;
+  readFom();
+  firebase
+    .database()
+    .ref("Top_Anime/" + namefpgeloaiV+"/"+fanpageV)
+    .on("value", function (snap) {
+    document.getElementById("namefpgeloai").value = snap.val().namefpgeloai;
+     document.getElementById("fanpage").value = snap.val().fanpage;
+      document.getElementById("fpgimg1").value = snap.val().fpgimg1;
+      document.getElementById("fpgname1").value = snap.val().fpgname1;
+      document.getElementById("fpgview1").value = snap.val().fpgview1;
+      document.getElementById("fpglt1").value = snap.val().fpglt1;
+      document.getElementById("fpgimg2").value = snap.val().fpgimg2;
+      document.getElementById("fpgname2").value = snap.val().fpgname2;
+      document.getElementById("fpgview2").value = snap.val().fpgview2;
+      document.getElementById("fpglt2").value = snap.val().fpglt2;
+      document.getElementById("fpgimg3").value = snap.val().fpgimg3;
+      document.getElementById("fpgname3").value = snap.val().fpgname3;
+      document.getElementById("fpgview3").value = snap.val().fpgview3;
+      document.getElementById("fpglt3").value = snap.val().fpglt3;
+      document.getElementById("fpgimg4").value = snap.val().fpgimg4;
+      document.getElementById("fpgname4").value = snap.val().fpgname4;
+      document.getElementById("fpgview4").value = snap.val().fpgview4;
+      document.getElementById("fpglt4").value = snap.val().fpglt4;
+      document.getElementById("fpgimg5").value = snap.val().fpgimg5;
+      document.getElementById("fpgname5").value = snap.val().fpgname5;
+      document.getElementById("fpgview5").value = snap.val().fpgview5;
+      document.getElementById("fpglt5").value = snap.val().fpglt5;
+      document.getElementById("fpgimg6").value = snap.val().fpgimg6;
+      document.getElementById("fpgname6").value = snap.val().fpgname6;
+      document.getElementById("fpgview6").value = snap.val().fpgview6;
+      document.getElementById("fpglt6").value = snap.val().fpglt6;
+
+
+    });
+};
+    </script>
+  </body>
+</html>

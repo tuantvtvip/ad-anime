@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta banner2="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD with Firebase</title>
+    <link rel="stylesheet" href="Admin_webfim.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>CRUD with Firebase</h2>
+      <hr />
+      <br />
+      <div class="form">
+        <label> banner1</label>
+         <input type="text"  id="banner1" /> <br /><br />
+           <label>banner2</label>
+         <input type="text" banner2="banner2" id="banner2" /> <br /><br />
+           <label>banner3</label>
+         <input type="text" banner2="banner3" id="banner3" /> <br /><br />
+           <label>banner4</label>
+        <input type="text" banner2="banner4" id="banner4" /> <br /><br />
+           <label>banner5</label>
+        <input type="text" banner2="banner" id="banner5" /> <br /><br />
+                 <label>banner6</label>
+        <input type="text" banner2="banner4" id="banner6" /> <br /><br />
+     <label>_______________________________________________________</label> <br /><br />
+          <h2>Thịnh Hành</h2> <br /><br />
+  
+          <label>TH.IMG1</label>
+         <input type="text"  id="thimg1" /> <br /><br/>
+          <label>TH.NAME1</label>
+         <input type="text"  id="thname1" /> <br /><br />
+        <label>TH.VIEW1</label>
+         <input type="text"  id="thview1" /> <br /><br />
+          <label>Lẻ hay Tập 1</label>
+         <input type="text"  id="thlt1" value="L/T" /> <br /><br />
+         <label>TH.IMG2</label>
+         <input type="text"  id="thimg2" /> <br /><br/>
+         <label>TH.NAME2</label>
+         <input type="text"  id="thname2" /> <br /><br />
+        <label>TH.VIEW2</label>
+         <input type="text"  id="thview2" /> <br /><br />
+         <label>Lẻ hay Tập 2</label>
+         <input type="text"  id="thlt2"value="L/T" /> <br /><br />
+           <label>TH.IMG3</label>
+         <input type="text"  id="thimg3" /> <br /><br/>
+          <label>TH.NAME3</label>
+         <input type="text"  id="thname3" /> <br /><br />
+        <label>TH.VIEW3</label>
+         <input type="text"  id="thview3" /> <br /><br />
+         <label>Lẻ hay Tập 3</label>
+         <input type="text"  id="thlt3" value="L/T"/> <br /><br />
+        
+          <label>TH.IMG4</label>
+         <input type="text"  id="thimg4" /> <br /><br/>
+          <label>TH.NAME4</label>
+         <input type="text"  id="thname4" /> <br /><br />
+        <label>TH.VIEW4</label>
+         <input type="text"  id="thview4" /> <br /><br />
+          <label>Lẻ hay Tập 4</label>
+         <input type="text"  id="thlt4" value="L/T" /> <br /><br />
+    
+          <label>TH.IMG5</label>
+         <input type="text"  id="thimg5" /> <br /><br/>
+         <label>TH.NAME5</label>
+         <input type="text"  id="thname5" /> <br /><br />
+        <label>TH.VIEW5</label>
+         <input type="text"  id="thview5" /> <br /><br />
+         <label>Lẻ hay Tập 5</label>
+         <input type="text"  id="thlt5"value="L/T" /> <br /><br />
+          
+           <label>TH.IMG6</label>
+         <input type="text"  id="thimg6" /> <br /><br/>
+          <label>TH.NAME6</label>
+         <input type="text"  id="thname6" /> <br /><br />
+        <label>TH.VIEW6</label>
+         <input type="text"  id="thview6" /> <br /><br />
+         <label>Lẻ hay Tập 6</label>
+         <input type="text"  id="thlt6" value="L/T"/> <br /><br />
+
+        <label>_______________________________________________________</label> <br /><br />
+          <h2>Hoạt Hình</h2> <br /><br />
+  
+          <label>hh.IMG1</label>
+         <input type="text"  id="hhimg1" /> <br /><br/>
+          <label>hh.NAME1</label>
+         <input type="text"  id="hhname1" /> <br /><br />
+        <label>hh.VIEW1</label>
+         <input type="text"  id="hhview1" /> <br /><br />
+          <label>Lẻ hay Tập 1</label>
+         <input type="text"  id="hhlt1" value="L/T" /> <br /><br />
+    
+          <label>hh.IMG2</label>
+         <input type="text"  id="hhimg2" /> <br /><br/>
+         <label>hh.NAME2</label>
+         <input type="text"  id="hhname2" /> <br /><br />
+        <label>hh.VIEW2</label>
+         <input type="text"  id="hhview2" /> <br /><br />
+         <label>Lẻ hay Tập 2</label>
+         <input type="text"  id="hhlt2"value="L/T" /> <br /><br />
+          
+           <label>hh.IMG3</label>
+         <input type="text"  id="hhimg3" /> <br /><br/>
+          <label>hh.NAME3</label>
+         <input type="text"  id="hhname3" /> <br /><br />
+        <label>hh.VIEW3</label>
+         <input type="text"  id="hhview3" /> <br /><br />
+         <label>Lẻ hay Tập 3</label>
+         <input type="text"  id="hhlt3" value="L/T"/> <br /><br />
+        
+          <label>hh.IMG4</label>
+         <input type="text"  id="hhimg4" /> <br /><br/>
+          <label>hh.NAME4</label>
+         <input type="text"  id="hhname4" /> <br /><br />
+        <label>hh.VIEW4</label>
+         <input type="text"  id="hhview4" /> <br /><br />
+          <label>Lẻ hay Tập 4</label>
+         <input type="text"  id="hhlt4" value="L/T" /> <br /><br />
+    
+          <label>hh.IMG5</label>
+         <input type="text"  id="hhimg5" /> <br /><br/>
+         <label>hh.NAME5</label>
+         <input type="text"  id="hhname5" /> <br /><br />
+        <label>hh.VIEW5</label>
+         <input type="text"  id="hhview5" /> <br /><br />
+         <label>Lẻ hay Tập 5</label>
+         <input type="text"  id="hhlt5"value="L/T" /> <br /><br />
+          
+           <label>hh.IMG6</label>
+         <input type="text"  id="hhimg6" /> <br /><br/>
+          <label>hh.NAME6</label>
+         <input type="text"  id="hhname6" /> <br /><br />
+        <label>hh.VIEW6</label>
+         <input type="text"  id="hhview6" /> <br /><br />
+         <label>Lẻ hay Tập 6</label>
+         <input type="text"  id="hhlt6" value="L/T"/> <br /><br />
+        <label>_______________________________________________________</label> <br /><br />
+          <h2>Hôm nay xem gì</h2> <br /><br />
+  
+          <label>hnxg.IMG1</label>
+         <input type="text"  id="hnxgimg1" /> <br /><br/>
+          <label>hnxg.NAME1</label>
+         <input type="text"  id="hnxgname1" /> <br /><br />
+        <label>hnxg.VIEW1</label>
+         <input type="text"  id="hnxgview1" /> <br /><br />
+          <label>Lẻ hay Tập 1</label>
+         <input type="text"  id="hnxglt1" value="L/T" /> <br /><br />
+    
+          <label>hnxg.IMG2</label>
+         <input type="text"  id="hnxgimg2" /> <br /><br/>
+         <label>hnxg.NAME2</label>
+         <input type="text"  id="hnxgname2" /> <br /><br />
+        <label>hnxg.VIEW2</label>
+         <input type="text"  id="hnxgview2" /> <br /><br />
+         <label>Lẻ hay Tập 2</label>
+         <input type="text"  id="hnxglt2"value="L/T" /> <br /><br />
+          
+           <label>hnxg.IMG3</label>
+         <input type="text"  id="hnxgimg3" /> <br /><br/>
+          <label>hnxg.NAME3</label>
+         <input type="text"  id="hnxgname3" /> <br /><br />
+        <label>hnxg.VIEW3</label>
+         <input type="text"  id="hnxgview3" /> <br /><br />
+         <label>Lẻ hay Tập 3</label>
+         <input type="text"  id="hnxglt3" value="L/T"/> <br /><br />
+        
+          <label>hnxg.IMG4</label>
+         <input type="text"  id="hnxgimg4" /> <br /><br/>
+          <label>hnxg.NAME4</label>
+         <input type="text"  id="hnxgname4" /> <br /><br />
+        <label>hnxg.VIEW4</label>
+         <input type="text"  id="hnxgview4" /> <br /><br />
+          <label>Lẻ hay Tập 4</label>
+         <input type="text"  id="hnxglt4" value="L/T" /> <br /><br />
+    
+          <label>hnxg.IMG5</label>
+         <input type="text"  id="hnxgimg5" /> <br /><br/>
+         <label>hnxg.NAME5</label>
+         <input type="text"  id="hnxgname5" /> <br /><br />
+        <label>hnxg.VIEW5</label>
+         <input type="text"  id="hnxgview5" /> <br /><br />
+         <label>Lẻ hay Tập 5</label>
+         <input type="text"  id="hnxglt5"value="L/T" /> <br /><br />
+          
+           <label>hnxg.IMG6</label>
+         <input type="text"  id="hnxgimg6" /> <br /><br/>
+          <label>hnxg.NAME6</label>
+         <input type="text"  id="hnxgname6" /> <br /><br />
+        <label>hnxg.VIEW6</label>
+         <input type="text"  id="hnxgview6" /> <br /><br />
+         <label>Lẻ hay Tập 6</label>
+         <input type="text"  id="hnxglt6" value="L/T"/> <br /><br />
+          <label>_______________________________________________________</label> <br /><br />
+          <h2>Bảng Xếp Hạng</h2> <br /><br />
+  
+          <label>bxh.IMG1</label>
+         <input type="text"  id="bxhimg1" /> <br /><br/>
+          <label>bxh.NAME1</label>
+         <input type="text"  id="bxhname1" /> <br /><br />
+          <label>Lẻ hay Tập 1</label>
+         <input type="text"  id="bxhlt1" value="L/T" /> <br /><br />
+    
+          <label>bxh.IMG2</label>
+         <input type="text"  id="bxhimg2" /> <br /><br/>
+         <label>bxh.NAME2</label>
+         <input type="text"  id="bxhname2" /> <br /><br />
+         <label>Lẻ hay Tập 2</label>
+         <input type="text"  id="bxhlt2"value="L/T" /> <br /><br />
+          
+           <label>bxh.IMG3</label>
+         <input type="text"  id="bxhimg3" /> <br /><br/>
+          <label>bxh.NAME3</label>
+         <input type="text"  id="bxhname3" /> <br /><br />
+         <label>Lẻ hay Tập 3</label>
+         <input type="text"  id="bxhlt3" value="L/T"/> <br /><br />
+        
+          <label>bxh.IMG4</label>
+         <input type="text"  id="bxhimg4" /> <br /><br/>
+          <label>bxh.NAME4</label>
+         <input type="text"  id="bxhname4" /> <br /><br />
+          <label>Lẻ hay Tập 4</label>
+         <input type="text"  id="bxhlt4" value="L/T" /> <br /><br />
+    
+          <label>bxh.IMG5</label>
+         <input type="text"  id="bxhimg5" /> <br /><br/>
+         <label>bxh.NAME5</label>
+         <input type="text"  id="bxhname5" /> <br /><br />
+         <label>Lẻ hay Tập 5</label>
+         <input type="text"  id="bxhlt5"value="L/T" /> <br /><br />
+          
+           <label>bxh.IMG6</label>
+         <input type="text"  id="bxhimg6" /> <br /><br/>
+          <label>bxh.NAME6</label>
+         <input type="text"  id="bxhname6" /> <br /><br />
+         <label>Lẻ hay Tập 6</label>
+         <input type="text"  id="bxhlt6" value="L/T"/> <br /><br /> 
+      </div>
+
+      <div class="buttons">
+        <button id="insert">Insert</button>
+        <button id="read">Read</button>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyB1d2RnWXRHSTS1qlZw4PeT8mxpH40k4rQ",
+  authDomain: "music-chill.firebaseapp.com",
+  databaseURL: "https://music-chill-default-rtdb.firebaseio.com",
+  projectId: "music-chill",
+  storageBucket: "music-chill.appspot.com",
+  messagingSenderId: "1003717395193",
+  appId: "1:1003717395193:web:a5367243d34afac9f81828"
+};
+firebase.initializeApp(firebaseConfig);
+//var banner1V, banner2V, banner3V, banner4V;
+function readFom() {
+  banner1V = document.getElementById("banner1").value;
+  banner2V = document.getElementById("banner2").value;
+  banner3V = document.getElementById("banner3").value;
+  banner4V = document.getElementById("banner4").value;
+  banner5V = document.getElementById("banner5").value;
+  banner6V = document.getElementById("banner6").value;
+  thimg1V = document.getElementById("thimg1").value;
+  thname1V = document.getElementById("thname1").value;
+  thview1V = document.getElementById("thview1").value;
+  thlt1V = document.getElementById("thlt1").value;
+  thimg2V = document.getElementById("thimg2").value;
+  thname2V = document.getElementById("thname2").value;
+  thview2V = document.getElementById("thview2").value;
+  thlt2V = document.getElementById("thlt2").value;
+thimg3V = document.getElementById("thimg3").value;
+thname3V = document.getElementById("thname3").value;
+thview3V = document.getElementById("thview3").value;
+thlt3V = document.getElementById("thlt3").value;
+thimg4V = document.getElementById("thimg4").value;
+thname4V = document.getElementById("thname4").value;
+thview4V = document.getElementById("thview4").value;
+thlt4V = document.getElementById("thlt4").value;
+thimg5V = document.getElementById("thimg5").value;
+thname5V = document.getElementById("thname5").value;
+thview5V = document.getElementById("thview5").value;
+thlt5V = document.getElementById("thlt5").value;
+thimg6V = document.getElementById("thimg6").value;
+thname6V = document.getElementById("thname6").value;
+thview6V = document.getElementById("thview6").value;
+thlt6V = document.getElementById("thlt6").value;
+hhimg1V = document.getElementById("hhimg1").value;
+  hhname1V = document.getElementById("hhname1").value;
+  hhview1V = document.getElementById("hhview1").value;
+  hhlt1V = document.getElementById("hhlt1").value;
+  hhimg2V = document.getElementById("hhimg2").value;
+  hhname2V = document.getElementById("hhname2").value;
+  hhview2V = document.getElementById("hhview2").value;
+  hhlt2V = document.getElementById("hhlt2").value;
+hhimg3V = document.getElementById("hhimg3").value;
+hhname3V = document.getElementById("hhname3").value;
+hhview3V = document.getElementById("hhview3").value;
+hhlt3V = document.getElementById("hhlt3").value;
+hhimg4V = document.getElementById("hhimg4").value;
+hhname4V = document.getElementById("hhname4").value;
+hhview4V = document.getElementById("hhview4").value;
+hhlt4V = document.getElementById("hhlt4").value;
+hhimg5V = document.getElementById("hhimg5").value;
+hhname5V = document.getElementById("hhname5").value;
+hhview5V = document.getElementById("hhview5").value;
+hhlt5V = document.getElementById("hhlt5").value;
+hhimg6V = document.getElementById("hhimg6").value;
+hhname6V = document.getElementById("hhname6").value;
+hhview6V = document.getElementById("hhview6").value;
+hhlt6V = document.getElementById("hhlt6").value;
+hnxgimg1V = document.getElementById("hnxgimg1").value;
+  hnxgname1V = document.getElementById("hnxgname1").value;
+  hnxgview1V = document.getElementById("hnxgview1").value;
+  hnxglt1V = document.getElementById("hnxglt1").value;
+  hnxgimg2V = document.getElementById("hnxgimg2").value;
+  hnxgname2V = document.getElementById("hnxgname2").value;
+  hnxgview2V = document.getElementById("hnxgview2").value;
+  hnxglt2V = document.getElementById("hnxglt2").value;
+hnxgimg3V = document.getElementById("hnxgimg3").value;
+hnxgname3V = document.getElementById("hnxgname3").value;
+hnxgview3V = document.getElementById("hnxgview3").value;
+hnxglt3V = document.getElementById("hnxglt3").value;
+hnxgimg4V = document.getElementById("hnxgimg4").value;
+hnxgname4V = document.getElementById("hnxgname4").value;
+hnxgview4V = document.getElementById("hnxgview4").value;
+hnxglt4V = document.getElementById("hnxglt4").value;
+hnxgimg5V = document.getElementById("hnxgimg5").value;
+hnxgname5V = document.getElementById("hnxgname5").value;
+hnxgview5V = document.getElementById("hnxgview5").value;
+hnxglt5V = document.getElementById("hnxglt5").value;
+hnxgimg6V = document.getElementById("hnxgimg6").value;
+hnxgname6V = document.getElementById("hnxgname6").value;
+hnxgview6V = document.getElementById("hnxgview6").value;
+hnxglt6V = document.getElementById("hnxglt6").value;
+bxhimg1V = document.getElementById("bxhimg1").value;
+  bxhname1V = document.getElementById("bxhname1").value;
+  bxhlt1V = document.getElementById("bxhlt1").value;
+  bxhimg2V = document.getElementById("bxhimg2").value;
+  bxhname2V = document.getElementById("bxhname2").value;
+  bxhlt2V = document.getElementById("bxhlt2").value;
+bxhimg3V = document.getElementById("bxhimg3").value;
+bxhname3V = document.getElementById("bxhname3").value;
+bxhlt3V = document.getElementById("bxhlt3").value;
+bxhimg4V = document.getElementById("bxhimg4").value;
+bxhname4V = document.getElementById("bxhname4").value;
+bxhlt4V = document.getElementById("bxhlt4").value;
+bxhimg5V = document.getElementById("bxhimg5").value;
+bxhname5V = document.getElementById("bxhname5").value;
+bxhlt5V = document.getElementById("bxhlt5").value;
+bxhimg6V = document.getElementById("bxhimg6").value;
+bxhname6V = document.getElementById("bxhname6").value;
+bxhlt6V = document.getElementById("bxhlt6").value;
+
+};
+document.getElementById("insert").onclick = function () {
+  //alert("bạn có chắc lưu không, nếu không đóng tab hoặc thoát nhé để không mất những dữ liệu khác !!!!!!");
+  readFom();
+  firebase
+    .database()
+    .ref("Top_Anime/" + "home")
+    .set({
+      banner1No: banner1V,
+      banner2: banner2V,
+      banner3: banner3V,
+      banner4: banner4V,
+      banner5: banner5V,
+      banner6: banner6V,
+      thimg1: thimg1V,
+      thname1: thname1V,
+      thview1: thview1V,
+      thlt1: thlt1V,
+      thimg2: thimg2V,
+      thname2: thname2V,
+      thview2: thview2V,
+      thlt2: thlt2V,
+      thimg3: thimg3V,
+      thname3: thname3V,
+      thview3: thview3V,
+      thlt3: thlt3V,
+      thimg4: thimg4V,
+      thname4: thname4V,
+      thview4: thview4V,
+      thlt4: thlt4V,
+     thimg5: thimg5V,
+      thname5: thname5V,
+      thview5: thview5V,
+      thlt5: thlt5V,
+      thimg6: thimg6V,
+      thname6: thname6V,
+      thview6: thview6V,
+      thlt6: thlt6V,
+      hhimg1: hhimg1V,
+      hhname1: hhname1V,
+      hhview1: hhview1V,
+      hhlt1: hhlt1V,
+      hhimg2: hhimg2V,
+      hhname2: hhname2V,
+      hhview2: hhview2V,
+      hhlt2: hhlt2V,
+      hhimg3: hhimg3V,
+      hhname3: hhname3V,
+      hhview3: hhview3V,
+      hhlt3: hhlt3V,
+      hhimg4: hhimg4V,
+      hhname4: hhname4V,
+      hhview4: hhview4V,
+      hhlt4: hhlt4V,
+     hhimg5: hhimg5V,
+      hhname5: hhname5V,
+      hhview5: hhview5V,
+      hhlt5: hhlt5V,
+      hhimg6: hhimg6V,
+      hhname6: hhname6V,
+      hhview6: hhview6V,
+      hhlt6: hhlt6V,
+      hnxgimg1: hnxgimg1V,
+      hnxgname1: hnxgname1V,
+      hnxgview1: hnxgview1V,
+      hnxglt1: hnxglt1V,
+      hnxgimg2: hnxgimg2V,
+      hnxgname2: hnxgname2V,
+      hnxgview2: hnxgview2V,
+      hnxglt2: hnxglt2V,
+      hnxgimg3: hnxgimg3V,
+      hnxgname3: hnxgname3V,
+      hnxgview3: hnxgview3V,
+      hnxglt3: hnxglt3V,
+      hnxgimg4: hnxgimg4V,
+      hnxgname4: hnxgname4V,
+      hnxgview4: hnxgview4V,
+      hnxglt4: hnxglt4V,
+     hnxgimg5: hnxgimg5V,
+      hnxgname5: hnxgname5V,
+      hnxgview5: hnxgview5V,
+      hnxglt5: hnxglt5V,
+      hnxgimg6: hnxgimg6V,
+      hnxgname6: hnxgname6V,
+      hnxgview6: hnxgview6V,
+      hnxglt6: hnxglt6V,
+      bxhimg1: bxhimg1V,
+      bxhname1: bxhname1V,
+      bxhlt1: bxhlt1V,
+      bxhimg2: bxhimg2V,
+      bxhname2: bxhname2V,
+      bxhlt2: bxhlt2V,
+      bxhimg3: bxhimg3V,
+      bxhname3: bxhname3V,
+      bxhlt3: bxhlt3V,
+      bxhimg4: bxhimg4V,
+      bxhname4: bxhname4V,
+      bxhlt4: bxhlt4V,
+     bxhimg5: bxhimg5V,
+      bxhname5: bxhname5V,
+      bxhlt5: bxhlt5V,
+      bxhimg6: bxhimg6V,
+      bxhname6: bxhname6V,
+      bxhlt6: bxhlt6V,
+    });
+ alert("Data Inserted");
+  document.getElementById("banner1").value = "";
+  document.getElementById("banner2").value = "";
+  document.getElementById("banner3").value = "";
+  document.getElementById("banner4").value = "";
+  document.getElementById("banner5").value = "";
+  document.getElementById("banner6").value = "";
+  document.getElementById("thimg1").value = "";
+  document.getElementById("thname1").value = "";
+ document.getElementById("thview1").value = "";
+ document.getElementById("thlt1").value = "";
+ document.getElementById("thimg2").value = "";
+  document.getElementById("thname2").value = "";
+ document.getElementById("thview2").value = "";
+ document.getElementById("thlt2").value = "";
+ document.getElementById("thimg3").value = "";
+  document.getElementById("thname3").value = "";
+ document.getElementById("thview3").value = "";
+ document.getElementById("thlt3").value = "";
+ document.getElementById("thimg4").value = "";
+  document.getElementById("thname4").value = "";
+ document.getElementById("thview4").value = "";
+ document.getElementById("thlt4").value = "";
+ document.getElementById("thimg5").value = "";
+  document.getElementById("thname5").value = "";
+ document.getElementById("thview5").value = "";
+ document.getElementById("thlt5").value = "";
+ document.getElementById("thimg6").value = "";
+  document.getElementById("thname6").value = "";
+ document.getElementById("thview6").value = "";
+ document.getElementById("thlt6").value = "";
+ document.getElementById("hhimg1").value = "";
+  document.getElementById("hhname1").value = "";
+ document.getElementById("hhview1").value = "";
+ document.getElementById("hhlt1").value = "";
+ document.getElementById("hhimg2").value = "";
+  document.getElementById("hhname2").value = "";
+ document.getElementById("hhview2").value = "";
+ document.getElementById("hhlt2").value = "";
+ document.getElementById("hhimg3").value = "";
+  document.getElementById("hhname3").value = "";
+ document.getElementById("hhview3").value = "";
+ document.getElementById("hhlt3").value = "";
+ document.getElementById("hhimg4").value = "";
+  document.getElementById("hhname4").value = "";
+ document.getElementById("hhview4").value = "";
+ document.getElementById("hhlt4").value = "";
+ document.getElementById("hhimg5").value = "";
+  document.getElementById("hhname5").value = "";
+ document.getElementById("hhview5").value = "";
+ document.getElementById("hhlt5").value = "";
+ document.getElementById("hhimg6").value = "";
+  document.getElementById("hhname6").value = "";
+ document.getElementById("hhview6").value = "";
+ document.getElementById("hhlt6").value = "";
+ document.getElementById("hnxgimg1").value = "";
+  document.getElementById("hnxgname1").value = "";
+ document.getElementById("hnxgview1").value = "";
+ document.getElementById("hnxglt1").value = "";
+ document.getElementById("hnxgimg2").value = "";
+  document.getElementById("hnxgname2").value = "";
+ document.getElementById("hnxgview2").value = "";
+ document.getElementById("hnxglt2").value = "";
+ document.getElementById("hnxgimg3").value = "";
+  document.getElementById("hnxgname3").value = "";
+ document.getElementById("hnxgview3").value = "";
+ document.getElementById("hnxglt3").value = "";
+ document.getElementById("hnxgimg4").value = "";
+  document.getElementById("hnxgname4").value = "";
+ document.getElementById("hnxgview4").value = "";
+ document.getElementById("hnxglt4").value = "";
+ document.getElementById("hnxgimg5").value = "";
+  document.getElementById("hnxgname5").value = "";
+ document.getElementById("hnxgview5").value = "";
+ document.getElementById("hnxglt5").value = "";
+ document.getElementById("hnxgimg6").value = "";
+  document.getElementById("hnxgname6").value = "";
+ document.getElementById("hnxgview6").value = "";
+ document.getElementById("hnxglt6").value = "";
+};
+document.getElementById("bxhimg1").value = "";
+document.getElementById("bxhname1").value = "";
+ document.getElementById("bxhlt1").value = "";
+ document.getElementById("bxhimg2").value = "";
+document.getElementById("bxhname2").value = "";
+ document.getElementById("bxhlt2").value = "";
+ document.getElementById("bxhimg3").value = "";
+ document.getElementById("bxhname3").value = "";
+ document.getElementById("bxhlt3").value = "";
+ document.getElementById("bxhimg4").value = "";
+ document.getElementById("bxhname4").value = "";
+ document.getElementById("bxhlt4").value = "";
+ document.getElementById("bxhimg5").value = "";
+ document.getElementById("bxhname5").value = "";
+ document.getElementById("bxhlt5").value = "";
+ document.getElementById("bxhimg6").value = "";
+ document.getElementById("bxhname6").value = "";
+ document.getElementById("bxhlt6").value = "";
+// alert("Data Inserted");
+document.getElementById("read").onclick = function () {
+  readFom();
+  firebase
+    .database()
+    .ref("Top_Anime/" + "home")
+    .on("value", function (snap) {
+    document.getElementById("banner1").value = snap.val().banner1No;
+     document.getElementById("banner2").value = snap.val().banner2;
+      document.getElementById("banner3").value = snap.val().banner3;
+      document.getElementById("banner4").value = snap.val().banner4;
+      document.getElementById("banner5").value = snap.val().banner5;
+      document.getElementById("banner6").value = snap.val().banner6;
+      document.getElementById("thimg1").value = snap.val().thimg1;
+      document.getElementById("thname1").value = snap.val().thname1;
+      document.getElementById("thview1").value = snap.val().thview1;
+      document.getElementById("thlt1").value = snap.val().thlt1;
+      document.getElementById("thimg2").value = snap.val().thimg2;
+      document.getElementById("thname2").value = snap.val().thname2;
+      document.getElementById("thview2").value = snap.val().thview2;
+      document.getElementById("thlt2").value = snap.val().thlt2;
+      document.getElementById("thimg3").value = snap.val().thimg3;
+      document.getElementById("thname3").value = snap.val().thname3;
+      document.getElementById("thview3").value = snap.val().thview3;
+      document.getElementById("thlt3").value = snap.val().thlt3;
+      document.getElementById("thimg4").value = snap.val().thimg4;
+      document.getElementById("thname4").value = snap.val().thname4;
+      document.getElementById("thview4").value = snap.val().thview4;
+      document.getElementById("thlt4").value = snap.val().thlt4;
+      document.getElementById("thimg5").value = snap.val().thimg5;
+      document.getElementById("thname5").value = snap.val().thname5;
+      document.getElementById("thview5").value = snap.val().thview5;
+      document.getElementById("thlt5").value = snap.val().thlt5;
+      document.getElementById("thimg6").value = snap.val().thimg6;
+      document.getElementById("thname6").value = snap.val().thname6;
+      document.getElementById("thview6").value = snap.val().thview6;
+      document.getElementById("thlt6").value = snap.val().thlt6;
+document.getElementById("hhimg1").value = snap.val().hhimg1;
+      document.getElementById("hhname1").value = snap.val().hhname1;
+      document.getElementById("hhview1").value = snap.val().hhview1;
+      document.getElementById("hhlt1").value = snap.val().hhlt1;
+      document.getElementById("hhimg2").value = snap.val().hhimg2;
+      document.getElementById("hhname2").value = snap.val().hhname2;
+      document.getElementById("hhview2").value = snap.val().hhview2;
+      document.getElementById("hhlt2").value = snap.val().hhlt2;
+      document.getElementById("hhimg3").value = snap.val().hhimg3;
+      document.getElementById("hhname3").value = snap.val().hhname3;
+      document.getElementById("hhview3").value = snap.val().hhview3;
+      document.getElementById("hhlt3").value = snap.val().hhlt3;
+      document.getElementById("hhimg4").value = snap.val().hhimg4;
+      document.getElementById("hhname4").value = snap.val().hhname4;
+      document.getElementById("hhview4").value = snap.val().hhview4;
+      document.getElementById("hhlt4").value = snap.val().hhlt4;
+      document.getElementById("hhimg5").value = snap.val().hhimg5;
+      document.getElementById("hhname5").value = snap.val().hhname5;
+      document.getElementById("hhview5").value = snap.val().hhview5;
+      document.getElementById("hhlt5").value = snap.val().hhlt5;
+      document.getElementById("hhimg6").value = snap.val().hhimg6;
+      document.getElementById("hhname6").value = snap.val().hhname6;
+      document.getElementById("hhview6").value = snap.val().hhview6;
+      document.getElementById("hhlt6").value = snap.val().hhlt6;
+document.getElementById("hnxgimg1").value = snap.val().hnxgimg1;
+      document.getElementById("hnxgname1").value = snap.val().hnxgname1;
+      document.getElementById("hnxgview1").value = snap.val().hnxgview1;
+      document.getElementById("hnxglt1").value = snap.val().hnxglt1;
+      document.getElementById("hnxgimg2").value = snap.val().hnxgimg2;
+      document.getElementById("hnxgname2").value = snap.val().hnxgname2;
+      document.getElementById("hnxgview2").value = snap.val().hnxgview2;
+      document.getElementById("hnxglt2").value = snap.val().hnxglt2;
+      document.getElementById("hnxgimg3").value = snap.val().hnxgimg3;
+      document.getElementById("hnxgname3").value = snap.val().hnxgname3;
+      document.getElementById("hnxgview3").value = snap.val().hnxgview3;
+      document.getElementById("hnxglt3").value = snap.val().hnxglt3;
+      document.getElementById("hnxgimg4").value = snap.val().hnxgimg4;
+      document.getElementById("hnxgname4").value = snap.val().hnxgname4;
+      document.getElementById("hnxgview4").value = snap.val().hnxgview4;
+      document.getElementById("hnxglt4").value = snap.val().hnxglt4;
+      document.getElementById("hnxgimg5").value = snap.val().hnxgimg5;
+      document.getElementById("hnxgname5").value = snap.val().hnxgname5;
+      document.getElementById("hnxgview5").value = snap.val().hnxgview5;
+      document.getElementById("hnxglt5").value = snap.val().hnxglt5;
+      document.getElementById("hnxgimg6").value = snap.val().hnxgimg6;
+      document.getElementById("hnxgname6").value = snap.val().hnxgname6;
+      document.getElementById("hnxgview6").value = snap.val().hnxgview6;
+      document.getElementById("hnxglt6").value = snap.val().hnxglt6;
+document.getElementById("bxhimg1").value = snap.val().bxhimg1;
+      document.getElementById("bxhname1").value = snap.val().bxhname1;
+      document.getElementById("bxhlt1").value = snap.val().bxhlt1;
+      document.getElementById("bxhimg2").value = snap.val().bxhimg2;
+      document.getElementById("bxhname2").value = snap.val().bxhname2;
+      document.getElementById("bxhlt2").value = snap.val().bxhlt2;
+      document.getElementById("bxhimg3").value = snap.val().bxhimg3;
+      document.getElementById("bxhname3").value = snap.val().bxhname3;
+      document.getElementById("bxhlt3").value = snap.val().bxhlt3;
+      document.getElementById("bxhimg4").value = snap.val().bxhimg4;
+      document.getElementById("bxhname4").value = snap.val().bxhname4;
+      document.getElementById("bxhlt4").value = snap.val().bxhlt4;
+      document.getElementById("bxhimg5").value = snap.val().bxhimg5;
+      document.getElementById("bxhname5").value = snap.val().bxhname5;
+      document.getElementById("bxhlt5").value = snap.val().bxhlt5;
+      document.getElementById("bxhimg6").value = snap.val().bxhimg6;
+      document.getElementById("bxhname6").value = snap.val().bxhname6;
+      document.getElementById("bxhlt6").value = snap.val().bxhlt6;
+
+    });
+};
+    </script>
+  </body>
+</html>
